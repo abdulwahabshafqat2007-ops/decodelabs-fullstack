@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CookIt — Find Recipes by Ingredients</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">🍳 CookIt</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#search">Search</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        &#9776;
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="search">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>What's in your <span class="highlight">fridge?</span></h1>
+          <p>Type your ingredients and we'll find the perfect recipe for you.</p>
+
+          <!-- Ingredient Input -->
+          <div class="input-area">
+            <div class="tag-input-wrapper" id="tagWrapper">
+              <input
+                type="text"
+                id="ingredientInput"
+                placeholder="e.g. chicken, garlic, tomato..."
+                autocomplete="off"
+              />
+            </div>
+            <button class="btn-primary" id="searchBtn">Find Recipes</button>
+            <button class="btn-secondary hidden" id="clearBtn">✕ Clear Search</button>
+          </div>
+
+          <!-- Tags will appear here -->
+          <div class="tags-container" id="tagsContainer"></div>
+          <p class="tag-hint">Press <kbd>Enter</kbd> or <kbd>,</kbd> after each ingredient</p>
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-img-placeholder">
+            <span>🥗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="category-filters">
+          <button class="filter-btn active" data-category="all">🍽 All</button>
+          <button class="filter-btn" data-category="breakfast">🍳 Breakfast</button>
+          <button class="filter-btn" data-category="lunch">🥪 Lunch</button>
+          <button class="filter-btn" data-category="dinner">🍝 Dinner</button>
+          <button class="filter-btn" data-category="snacks">🍿 Snacks</button>
+          <button class="filter-btn" data-category="dessert">🍰 Dessert</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECIPES GRID -->
+    <section class="recipes-section" id="recipes">
+      <div class="container">
+        <h2 class="section-title">Popular Recipes</h2>
+        <p class="results-count" id="resultsCount">Showing all recipes</p>
+        <div class="recipes-grid" id="recipesGrid">
+          <!-- Cards injected by JavaScript -->
+        </div>
+        <p class="no-results hidden" id="noResults">
+          😕 No recipes found with those ingredients. Try something else!
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>About <span class="highlight">CookIt</span></h2>
+          <p>CookIt helps you discover delicious international recipes using ingredients you already have at home. No more wasted food, no more wondering what to cook.</p>
+          <p>Simply type what's in your fridge, and let CookIt do the rest.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>50+</h3>
+            <p>Recipes</p>
+          </div>
+          <div class="stat-card">
+            <h3>6</h3>
+            <p>Categories</p>
+          </div>
+          <div class="stat-card">
+            <h3>100%</h3>
+            <p>Free</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">🍳 CookIt</p>
+      <p>Find recipes with what you have. Cook something amazing today.</p>
+      <p class="footer-copy">&copy; 2026 CookIt. Built with ❤️ by Shadow.</p>
+    </div>
+  </footer>
+  <!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
