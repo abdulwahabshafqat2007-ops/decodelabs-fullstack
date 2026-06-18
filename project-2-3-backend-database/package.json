@@ -1,5 +1,5 @@
 {
-  "name": "project-2-backend-api",
+  "name": "project-2-3-backend-database",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.22.5"
   }
 }
